@@ -18,8 +18,23 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+.right-aligned{
+  text-align:center;
+}
+
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main.container {
+  width:90%;
+  background-color:#f4f1ec;;
+  margin:0 auto;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

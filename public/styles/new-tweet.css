@@ -1,0 +1,20 @@
+textarea {
+  width:100%;
+  background-color: #f4f1ec;
+  border-bottom: 3px #545149 solid;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+}
+
+.tweet-details {
+  display:flex;
+  justify-content: space-between;
+}
+
+button {
+  color:#f4f1ec;
+  font-family: 'Bungee';
+  background-color:salmon;
+  border:none;
+}

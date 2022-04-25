@@ -1,0 +1,21 @@
+nav {
+  z-index:1;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  padding-left:1.5em;
+  padding-right:1.5em;
+  background-color: #3f7774;
+  color: #FFFFFF;
+
+}
+
+.logo {
+  font-family: 'Bungee';
+}
+
+i.fa-solid.fa-angles-down {
+  color: salmon;
+}
