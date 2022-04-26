@@ -1,7 +1,8 @@
 header {
-  height:400px;
+  padding-top: 120px;
+  position: relative;
+  height:500px;
   width:100%;
   text-align: center;
-  background-color: #50c7c1;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  background-color:lightslategray;
 }

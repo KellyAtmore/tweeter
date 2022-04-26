@@ -1,6 +1,7 @@
 textarea {
   width:100%;
   background-color: #f4f1ec;
+  margin-bottom:10px;
   border-bottom: 3px #545149 solid;
   border-top:none;
   border-left:none;
@@ -15,6 +16,6 @@ textarea {
 button {
   color:#f4f1ec;
   font-family: 'Bungee';
-  background-color:salmon;
+  background-color:#cb7d55;
   border:none;
 }
