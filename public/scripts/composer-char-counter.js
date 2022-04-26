@@ -1,15 +1,16 @@
 $(document).ready(function() {
   $("#tweet-text").on("input", function() {
-    let max = 140;
+    //let max = 140;
     let len = $(this).val().length;
-    let count = max - len;
+    let $count =  $(this).parent().find(".counter");
+    let remainingChar = (140 - len);
+    $count.text(remainingChar);
     
-    if (count <= 0) {
-      $(".counter").addClass("red-limit");
+    if (remainingChar < 0) {
+      $count.css("color", "red");
+    } else {
+      $count.css("color", "");
     }
-    if (count > 0) {
-      $(".counter").removeClass("red-limit");
-    }
-    $(".counter").text(count);
+   
   });
 });
