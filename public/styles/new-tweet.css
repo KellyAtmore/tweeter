@@ -1,3 +1,9 @@
+
+.new-tweet{
+  margin-bottom: 50px;
+}
+
+
 textarea {
   width:100%;
   background-color: #f4f1ec;
@@ -7,7 +13,9 @@ textarea {
   border-left:none;
   border-right:none;
 }
-
+.counter {
+  font-family: "Bungee";
+}
 .tweet-details {
   display:flex;
   justify-content: space-between;

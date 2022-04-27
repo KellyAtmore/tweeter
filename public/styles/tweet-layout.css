@@ -1,0 +1,37 @@
+
+article {
+  height: 300px;
+  border: solid 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:15px;
+}
+header.tweet-header{
+  display:flex;
+  justify-content: space-between;
+  background-color: #f4f1ec;
+  
+  padding:10px;
+}
+.tweet {
+  font-weight: 600;
+  padding-bottom:40px;
+  border-bottom: solid 3px #545149;
+}
+
+.handle {
+  color:lightgrey;
+  font-weight: 600;
+}
+
+footer.tweet-footer{
+display:flex;
+justify-content: space-between;
+}
+
+.tweet-stats {
+  padding-top:10px;
+  font-size:15px;
+  font-weight: 600;
+}
