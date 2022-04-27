@@ -7,6 +7,10 @@ article {
   justify-content: space-between;
   padding:15px;
 }
+
+article:hover {
+  box-shadow:  15px 15px 0px -5px lightslategrey;
+}
 header.tweet-header{
   display:flex;
   justify-content: space-between;
