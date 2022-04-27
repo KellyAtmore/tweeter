@@ -9,7 +9,8 @@ article {
 }
 
 article:hover {
-  box-shadow:  15px 15px 0px -5px lightslategrey;
+  box-shadow:  15px 15px 0px -5px salmon;
+  transition: 0.3s;
 }
 header.tweet-header{
   display:flex;
@@ -22,6 +23,18 @@ header.tweet-header{
   font-weight: 600;
   padding-bottom:40px;
   border-bottom: solid 3px #545149;
+}
+
+i.fa-solid {
+  padding: 5px;
+  color: #5b7bdf;
+}
+
+i.fa-solid:hover {
+  transform: scale(1.2);
+  color: salmon;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 .handle {
