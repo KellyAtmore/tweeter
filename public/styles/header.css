@@ -6,3 +6,13 @@ header {
   text-align: center;
   background-color:lightslategray;
 }
+
+
+@media (min-width: 768px) {
+  
+  header {
+    margin-left:20px;
+    width:45%;
+    float:left;
+  }
+}
