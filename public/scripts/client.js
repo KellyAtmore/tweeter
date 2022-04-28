@@ -1,25 +1,26 @@
 $(document).ready(function() {
 
+//hide error messages on page load
 $(".error-message").hide();
 $(".error-message2").hide();
 
-
+  //function for cross site scripting
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  //function for creating new tweet elements and populate using data obj
   const createTweetElement = function(data) {
-  
     const $tweet = ` <article>
     <header class="tweet-header">
-    
-    
-      <p><img src=${data.user.avatars}>${data.user.name}</p>
-     
+   <div class="align-left">
+    <img src=${data.user.avatars}>
+      <p class="name">${data.user.name}</p>
+     </div>
       <p class="handle">${data.user.handle}</p>
-      
+    
     </header>
       <p class="tweet">${escape(data.content.text)}</p>
     <footer class="tweet-footer">
@@ -30,26 +31,24 @@ $(".error-message2").hide();
     return $tweet;
   };
   
+  //renders and appends a tweet to the beginning of the container
   const renderTweets = function(data) {
   
     for (const el of data) {
-  
       const $newTweet = createTweetElement(el);
       $('.tweet-container').prepend($newTweet);
     }
   
   };
-  //renderTweets(data);
-
-
+  
 $("form").submit(function(event) {
 
     event.preventDefault();
     const data = $("#tweet-text").serialize();
-    $(".error-message").slideUp().hide();
+    $(".error-message").slideUp().hide();  //both error messages are hidden at first
     $(".error-message2").slideUp().hide();
     
-    if ($("#tweet-text").val() === "") {
+    if ($("#tweet-text").val() === "") {  //if the tweet is empty reveal error message
       
       $(".error-message").slideDown().show();
   
@@ -82,6 +81,5 @@ $("form").submit(function(event) {
       });
   };
   loadtweets();
-
 });
 

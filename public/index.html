@@ -27,7 +27,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -38,13 +40,11 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="logo">tweeter</span>
-
     <div class="right-aligned">
       <p><span class="bold">Write</span> a new tweet</p>
       <p><i class="fa-solid fa-angles-down"></i></p>
     </div>
   </nav>
-
   <header>
     <div>
       <img src="/images/profile-hex.png">
@@ -57,29 +57,22 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-
     <section class="new-tweet">
       <h2></h2>
       <form method="POST" action="/tweets/">
         <label for="tweet-text"></label>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="tweet-details">
-          
-          <button type="submit">Tweet</button>
+          <button class="button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
-          
         </div>
         <p class="error-message">Your tweet is empty!</p>
         <p class="error-message2">Your tweet is too long!</p>
       </form>
-      
     </section>
     <div class="tweet-container">
-
-
     </div>
   </main>
-
 </body>
 
 </html>

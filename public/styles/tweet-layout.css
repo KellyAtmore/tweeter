@@ -18,7 +18,9 @@ header.tweet-header{
   justify-content: space-between;
   width:95%;
   background-color: #f4f1ec;
-  
+  color:#545149;
+  margin:0px;
+  background:none;
   padding:10px;
 }
 .tweet {
@@ -44,6 +46,14 @@ i.fa-solid:hover {
   font-weight: 600;
 }
 
+.align-left {
+  height: 50px;
+  align-items: center;
+  display: flex;
+  }
+p.name{
+  margin-left:10px;
+}
 footer.tweet-footer{
 display:flex;
 justify-content: space-between;

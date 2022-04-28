@@ -3,7 +3,6 @@
   margin-bottom: 50px;
 }
 
-
 textarea {
   width:100%;
   background-color: #f4f1ec;
@@ -30,10 +29,11 @@ textarea {
   color:red;
   font-weight:600;
 }
-button {
+.button {
   color:#f4f1ec;
   font-family: 'Bungee';
-  background-color:#cb7d55;
+  background-color:#edb96c;
+  ;
   border:none;
 }
 button:hover{
