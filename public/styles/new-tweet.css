@@ -21,6 +21,9 @@ textarea {
   justify-content: space-between;
 }
 
+.error-message {
+  color:red;
+}
 button {
   color:#f4f1ec;
   font-family: 'Bungee';

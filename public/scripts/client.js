@@ -1,38 +1,12 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
 
-//console.log(data[0].user.name);
+
+
 
 $(document).ready(function() {
 
+  
+  
   const createTweetElement = function(data) {
     const $tweet = ` <article>
     <header class="tweet-header">
@@ -44,7 +18,7 @@ $(document).ready(function() {
   
     <p class="tweet">${data.content.text}</p>
     <footer class="tweet-footer">
-      <p class="tweet-stats">${data.created_at}</p>
+      <p class="tweet-stats">${timeago.format(new Date())}</p>
       <p class="tweet-stats"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></p>
     </footer>
   </article>`;
@@ -60,7 +34,7 @@ $(document).ready(function() {
     }
   
   };
-  renderTweets(data);
+  //renderTweets(data);
 
 
 $("form").submit(function(event) {
@@ -74,28 +48,26 @@ $("form").submit(function(event) {
       data: data,
     })
       .then(function(result)  {
-        console.log(result);
-        console.log(data);
+        loadtweets();
+        location.reload();
       });
     
   });
 
   const loadtweets = function() {
     
-    
-    
     $.ajax({
       type: "GET",
       url: "/tweets",
-      data: data,
     })
       .then(function(data) {
-        console.log('Success: ', renderTweets(data));
         
+        const reverseData = data.reverse();
+        renderTweets(reverseData);
       });
   };
 
-
+  loadtweets();
 
 });
 
