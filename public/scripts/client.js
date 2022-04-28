@@ -4,8 +4,12 @@
 
 
 $(document).ready(function() {
+
+$(".error-message").hide();
+$(".error-message2").hide();
+
   const createTweetElement = function(data) {
-    
+  
     const $tweet = ` <article>
     <header class="tweet-header">
       <p><img src=${data.user.avatars}>${data.user.name}</p>
@@ -36,12 +40,17 @@ $("form").submit(function(event) {
 
     event.preventDefault();
     const data = $("#tweet-text").serialize();
+    $(".error-message").slideUp().hide();
+    $(".error-message2").slideUp().hide();
     
     if ($("#tweet-text").val() === "") {
-      alert("Cannot post an empty tweet");
+      
+      $(".error-message").slideDown().show();
+  
     } else if ($("#tweet-text").val().length > 140) {
-      alert("You tweet is too long!");
+      $(".error-message2").slideDown().show();
     } else {
+      
       $.ajax({
         type: "POST",
         url: "/tweets",

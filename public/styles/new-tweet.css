@@ -23,6 +23,12 @@ textarea {
 
 .error-message {
   color:red;
+  font-weight:600;
+}
+
+.error-message2 {
+  color:red;
+  font-weight:600;
 }
 button {
   color:#f4f1ec;
