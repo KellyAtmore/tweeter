@@ -1,9 +1,9 @@
 header {
   padding-top: 120px;
-  position: relative;
+  text-align:center;
   height:500px;
   width:100%;
-  text-align: center;
+  
   background-color:lightslategray;
 }
 
@@ -11,7 +11,7 @@ header {
 @media (min-width: 768px) {
   
   header {
-    margin-left:20px;
+    margin-left:10px;
     width:45%;
     float:left;
   }

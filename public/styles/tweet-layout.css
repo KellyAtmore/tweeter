@@ -16,6 +16,7 @@ article:hover {
 header.tweet-header{
   display:flex;
   justify-content: space-between;
+  width:95%;
   background-color: #f4f1ec;
   
   padding:10px;

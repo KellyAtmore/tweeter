@@ -14,8 +14,12 @@ $(".error-message2").hide();
   
     const $tweet = ` <article>
     <header class="tweet-header">
+    
+    
       <p><img src=${data.user.avatars}>${data.user.name}</p>
+     
       <p class="handle">${data.user.handle}</p>
+      
     </header>
       <p class="tweet">${escape(data.content.text)}</p>
     <footer class="tweet-footer">
