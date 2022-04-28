@@ -1,12 +1,14 @@
-
-
-
-
-
 $(document).ready(function() {
 
 $(".error-message").hide();
 $(".error-message2").hide();
+
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const createTweetElement = function(data) {
   
@@ -15,9 +17,9 @@ $(".error-message2").hide();
       <p><img src=${data.user.avatars}>${data.user.name}</p>
       <p class="handle">${data.user.handle}</p>
     </header>
-      <p class="tweet">${data.content.text}</p>
+      <p class="tweet">${escape(data.content.text)}</p>
     <footer class="tweet-footer">
-      <p class="tweet-stats">${timeago.format(1473245023718)}</p>
+      <p class="tweet-stats">${timeago.format(new Date(data.created_at))}</p>
       <p class="tweet-stats"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></p>
     </footer>
   </article>`;
@@ -58,7 +60,8 @@ $("form").submit(function(event) {
       })
         .then(function(result)  {
           loadtweets();
-      
+          $('#tweet-text').val('');
+          $('.counter').val('140');
         });
     }
     event.preventDefault();
@@ -71,6 +74,7 @@ $("form").submit(function(event) {
     })
       .then(function(data) {
         renderTweets(data);
+        
       });
   };
   loadtweets();
